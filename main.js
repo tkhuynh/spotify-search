@@ -32,7 +32,12 @@ $(function() {
 					$(rightCol).append("<p><b>Artist:</b> " + artist.name + "</p>");
 				});
 				$(rightCol).append("<p><b>Album:</b> " + song.album.name + "</p>");
-				$(rightCol).append("<audio controls><source src='" + song.preview_url +"' type='audio/mpeg'></audio><p><i>Click Play to Listen</i></p>");
+				if (song.preview_url === null) {
+					$(rightCol).append("<p><i>No Song Preview Available</i><p>");
+				} else { 
+					$(rightCol).append("<audio controls><source src='" + song.preview_url +"' type='audio/mpeg'></audio><p><i>Click Play to Listen</i></p>");
+					console.log(song.preview_url);
+				}
 				$(row).append(leftCol);
 				$(row).append(rightCol);
 				$('#results').append(row);
