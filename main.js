@@ -17,7 +17,7 @@ $(function() {
   		$('#song').val('');
   		setTimeout(function (){
   			$('#loadingPic').hide();
-  		$.get('https://api.spotify.com/v1/search?q=' + song + '&type=track' ,function (data) {
+  			$.get('https://api.spotify.com/v1/search?q=' + song + '&type=track' ,function (data) {
 			var songNames = data.tracks.items;
 			songNames.forEach(function(song){
 				console.log(song);
@@ -41,8 +41,8 @@ $(function() {
 				$(row).append(leftCol);
 				$(row).append(rightCol);
 				$('#results').append(row);
+				});
 			});
-		});
 		}, 500);
 		
 	});
