@@ -10,7 +10,16 @@
 }
 img {
 	float: right;
+	height: 200px;
+	width: auto;
 }
 #results #left, #results #right {
 	margin-top: 25px;
+}
+p {
+	font-size: 16px;
+}
+#loadingPic {
+	display: none;
+	margin-right: 200px;
 }
