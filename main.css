@@ -2,8 +2,24 @@
 /*.container {
 	text-align: center;
 }*/
+body {
+	background-color: #E5E4D7;
+}
+.search-bar {
+	padding-bottom: 25px;
+}
+h1 {
+	margin-right: 125px; 
+}
+#icon {
+	height: 40px;
+	width: auto;
+	display: inline;
+	float: left;
+	margin-left: 110px;
+}
 #song {
-	width: 450px;
+	width: 475px;
 }
 #results {
 	margin-top: 10px;
@@ -21,5 +37,5 @@ p {
 }
 #loadingPic {
 	display: none;
-	margin-right: 200px;
+	margin-right: 500px;
 }

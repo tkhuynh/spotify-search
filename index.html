@@ -17,16 +17,16 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h1 class="text-center">Spotify Search</h1>
+      <div class="col-md-6 col-md-offset-3 search-bar">
+        <h1 class="text-center"><img src="http://www.symform.com/wp-content/uploads/spotify-icon.png" align="center" id="icon">Spotify Search</h1>
         <form class="form-inline" role="form" id="search">
           <div class="form-group">
-            <input type="text" class="form-control" name ="q" placeholder="Search Song" id="song">
-            <input type="submit" value="Search" class="btn btn-primary">
+            <input type="search" class="form-control" name ="q" placeholder="Search Song" id="song">
+            <input type="submit" value="Search" class="btn btn-success">
           </div>
         </form>
-        <img src="loading.gif" id="loadingPic">
       </div>
+      <img src="loading.gif" id="loadingPic">
     </div>
   </div>
   <div id="results">
