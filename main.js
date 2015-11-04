@@ -22,7 +22,7 @@ $(function() {
 				var row = $("<div class='row'></div>");
   				var leftCol = $("<div class='col-md-5' id='left'></div>");
   				var rightCol = $("<div class='col-md-7' id='right'></div>");	
-				$(leftCol).append("<img src='"+song.album.images[2].url+"'>");
+				$(leftCol).append("<img src='" + song.album.images[1].url + "'>");
 				$(rightCol).append("<p>Song Name: " + song.name + "</p>");
 				$(rightCol).append("<p>Duration: " + convertDuration(song.duration_ms) + "</p>");
 				song.artists.forEach(function(artist){
