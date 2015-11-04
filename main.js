@@ -12,8 +12,11 @@ $(function() {
   	$('#search').on('submit', function(event){
   		event.preventDefault();
   		$('#results').empty();
+  		$('#loadingPic').css("display","block");
   		var song = $('#song').val();
   		$('#song').val('');
+  		setTimeout(function (){
+  			$('#loadingPic').hide();
   		$.get('https://api.spotify.com/v1/search?q=' + song + '&type=track' ,function (data) {
 			var songNames = data.tracks.items;
 			songNames.forEach(function(song){
@@ -35,6 +38,8 @@ $(function() {
 				$('#results').append(row);
 			});
 		});
+		}, 1000);
+		
 	});
 
 });
