@@ -24,8 +24,12 @@ $(function() {
 				//will append img to left column, text to right, right and left to row, row to results 
 				var row = $("<div class='row'></div>");
   				var leftCol = $("<div class='col-md-4' id='left'></div>");
-  				var rightCol = $("<div class='col-md-8' id='right'></div>");	
-				$(leftCol).append("<img src='" + song.album.images[1].url + "'>");
+  				var rightCol = $("<div class='col-md-8' id='right'></div>");
+  				if (song.album.images.length === 0) {	
+  					$(leftCol).append("<img src='http://edcommunity.esri.com/connect-with-others/Profiles/A/~/media/Images/EdCommunity/no_image.png'>");
+  				} else {
+  					$(leftCol).append("<img src='" + song.album.images[1].url + "'>");
+  				}
 				$(rightCol).append("<p><b>Song Name:</b> " + song.name + "</p>");
 				$(rightCol).append("<p><b>Duration:</b> " + convertDuration(song.duration_ms) + "</p>");
 				song.artists.forEach(function(artist){
