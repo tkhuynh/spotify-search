@@ -20,15 +20,16 @@ $(function() {
 				console.log(song);
 				//will append img to left column, text to right, right and left to row, row to results 
 				var row = $("<div class='row'></div>");
-  				var leftCol = $("<div class='col-md-5' id='left'></div>");
-  				var rightCol = $("<div class='col-md-7' id='right'></div>");	
+  				var leftCol = $("<div class='col-md-4' id='left'></div>");
+  				var rightCol = $("<div class='col-md-8' id='right'></div>");	
 				$(leftCol).append("<img src='" + song.album.images[1].url + "'>");
-				$(rightCol).append("<p>Song Name: " + song.name + "</p>");
-				$(rightCol).append("<p>Duration: " + convertDuration(song.duration_ms) + "</p>");
+				$(rightCol).append("<p><b>Song Name:</b> " + song.name + "</p>");
+				$(rightCol).append("<p><b>Duration:</b> " + convertDuration(song.duration_ms) + "</p>");
 				song.artists.forEach(function(artist){
-					$(rightCol).append("<p>Artist: " + artist.name + "</p>");
+					$(rightCol).append("<p><b>Artist:</b> " + artist.name + "</p>");
 				});
-				$(rightCol).append("<p>Album: " + song.album.name + "</p>");
+				$(rightCol).append("<p><b>Album:</b> " + song.album.name + "</p>");
+				$(rightCol).append("<audio controls><source src='" + song.preview_url +"' type='audio/mpeg'></audio><p><i>Click Play to Listen</i></p>");
 				$(row).append(leftCol);
 				$(row).append(rightCol);
 				$('#results').append(row);
